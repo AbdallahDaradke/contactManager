@@ -20,8 +20,7 @@ function App() {
   }, [contact]);
 
   return (
-    <div>
-      <h1 className="app-header">Contact Manager App</h1>
+    <div className="App">
       <ContactForm addContact={addContact} />
       <ContactList contact={contact} setContact={setContact} />
     </div>

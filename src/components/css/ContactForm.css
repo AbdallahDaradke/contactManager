@@ -1,0 +1,16 @@
+.contact-header-and-form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.625rem;
+  margin-top: 5rem;
+}
+
+.contact-form {
+  padding: 40px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+/* #f8f8f8 */
