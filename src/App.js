@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import ContactForm from "./components/ContactForm";
+import { useEffect, useState } from "react";
 
 function App() {
+  const [contact, setContact] = useState([]);
+
+  const addContact = (singleContact) => {
+    setContact([...contact, singleContact]);
+  };
+
+  useEffect(() => {
+    if (contact.length > 0) {
+      console.log(contact[contact.length - 1].ContactName);
+      console.log(contact[contact.length - 1].Email);
+    }
+  }, [contact]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1 className="app-header">Contact Manager App</h1>
+      <ContactForm addContact={addContact} />
     </div>
   );
 }

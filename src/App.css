@@ -36,3 +36,9 @@
     transform: rotate(360deg);
   }
 }
+
+/* My css style */
+
+.app-header {
+  border-left: #61dafb 10px solid;
+}
