@@ -12,18 +12,18 @@ function App() {
     setContact([...contact, singleContact]);
   };
 
-  useEffect(() => {
-    if (contact.length > 0) {
-      console.log(`Contact Name : ${contact[contact.length - 1].ContactName} `);
-      console.log(`Contact Email: ${contact[contact.length - 1].Email}`);
-    }
-  }, [contact]);
+  // useEffect(() => {
+  //   if (contact.length > 0) {
+  //     console.log(`Contact Name : ${contact[contact.length - 1].ContactName} `);
+  //     console.log(`Contact Email: ${contact[contact.length - 1].Email}`);
+  //   }
+  // }, [contact]);
 
   return (
     <div>
       <h1 className="app-header">Contact Manager App</h1>
       <ContactForm addContact={addContact} />
-      <ContactList />
+      <ContactList contact={contact} />
     </div>
   );
 }
