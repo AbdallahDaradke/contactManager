@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
 
-function ContactItem({ singleContact, key }) {
+function ContactItem({ singleContact }) {
   return (
-    <li key={key}>
+    <li>
       <strong>{singleContact.ContactName}</strong> — Height:
       {singleContact.Email}
     </li>

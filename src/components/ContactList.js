@@ -10,14 +10,14 @@ function ContactList(props) {
           <ContactItem singleContact={singleContact} key={index} />
         ))}
       </ul>
-      <div className="contact-list">
+      {/* <div className="contact-list">
         <div className="contact-info">
           <p className="contact-para">ContactName:</p>
           <p className="contact-para">Email:</p>
         </div>
 
         <button className="btn">Delete</button>
-      </div>
+      </div> */}
     </div>
   );
 }
