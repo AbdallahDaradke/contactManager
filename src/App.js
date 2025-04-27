@@ -23,7 +23,7 @@ function App() {
     <div>
       <h1 className="app-header">Contact Manager App</h1>
       <ContactForm addContact={addContact} />
-      <ContactList contact={contact} />
+      <ContactList contact={contact} setContact={setContact} />
     </div>
   );
 }

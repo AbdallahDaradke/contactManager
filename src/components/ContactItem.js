@@ -1,10 +1,12 @@
 import React, { useEffect } from "react";
 
-function ContactItem({ singleContact }) {
+function ContactItem({ singleContact, onDelete }) {
   return (
     <li>
-      <strong>{singleContact.ContactName}</strong> — Height:
-      {singleContact.Email}
+      <strong>{singleContact.ContactName}</strong> - {singleContact.Email}
+      <button className="btn" onClick={onDelete}>
+        Delete
+      </button>
     </li>
   );
 }
