@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./css/ContactForm.css";
 
 function ContactForm(props) {
   const [ContactName, SetContactName] = useState("");
@@ -17,8 +18,10 @@ function ContactForm(props) {
   };
 
   return (
-    <div>
-      <form onSubmit={addContactSubmit}>
+    <div className="contact-header-and-form-container">
+      <h1 className="app-header">Contact Manager App</h1>
+
+      <form onSubmit={addContactSubmit} className="contact-form">
         <input
           type="text"
           placeholder="Name"
