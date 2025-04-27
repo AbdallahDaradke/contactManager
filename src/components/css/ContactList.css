@@ -1,0 +1,22 @@
+.contact-info {
+  display: flex;
+  gap: 9.125rem;
+}
+.contact-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.contact-list-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.btn {
+  margin-left: 20rem;
+}
