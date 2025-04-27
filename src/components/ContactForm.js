@@ -9,14 +9,28 @@ function ContactForm(props) {
       ContactName,
       Email,
     };
+    props.addContact(newContact);
+
+    SetContactName("");
+    SetEmail("");
   };
 
   return (
     <div>
-      <form>
-        <input type="text" />
-        <input type="text" />
-        <button>Add Contact</button>
+      <form onSubmit={addContactSubmit}>
+        <input
+          type="text"
+          placeholder="Name"
+          value={ContactName}
+          onChange={(e) => SetContactName(e.target.value)}
+        />
+        <input
+          type="text"
+          placeholder="Email"
+          value={Email}
+          onChange={(e) => SetEmail(e.target.value)}
+        />
+        <button type="submit">Add Contact</button>
       </form>
     </div>
   );

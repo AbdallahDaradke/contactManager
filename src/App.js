@@ -1,7 +1,7 @@
 import logo from "./logo.svg";
-import "./components/css/App.css";
+import "./App.css";
 import ContactForm from "./components/ContactForm";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function App() {
   const [contact, setContact] = useState([]);
@@ -9,6 +9,13 @@ function App() {
   const addContact = (singleContact) => {
     setContact([...contact, singleContact]);
   };
+
+  useEffect(() => {
+    if (contact.length > 0) {
+      console.log(contact[contact.length - 1].ContactName);
+      console.log(contact[contact.length - 1].Email);
+    }
+  }, [contact]);
 
   return (
     <div>
