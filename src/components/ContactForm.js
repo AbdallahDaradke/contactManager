@@ -5,6 +5,7 @@ function ContactForm(props) {
   const [Email, SetEmail] = useState("");
 
   const addContactSubmit = (e) => {
+    e.preventDefault();
     let newContact = {
       ContactName,
       Email,
